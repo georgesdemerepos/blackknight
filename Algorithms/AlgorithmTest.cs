@@ -4,16 +4,32 @@ namespace DeveloperSample.Algorithms
 {
     public class AlgorithmTest
     {
-        [Fact(Skip="Not implemented")]
+        [Fact]
         public void CanGetFactorial()
         {
-            Assert.Equal(24, Algorithms.GetFactorial(4));
+            // Arrange
+            int n = 5;
+            int expected = 120;
+
+            // Act
+            int result = Algorithms.GetFactorial(n);
+
+            // Assert
+            Assert.Equal(expected, result);
         }
 
-        [Fact(Skip="Not implemented")]
+        [Fact]
         public void CanFormatSeparators()
         {
-            Assert.Equal("a, b and c", Algorithms.FormatSeparators("a", "b", "c"));
+            // Arrange
+            string[] input = { "a", "b", "c" };
+            string expected = "a, b and c";
+
+            // Act
+            string result = Algorithms.FormatSeparators(input);
+
+            // Assert
+            Assert.Equal(expected, result);
         }
     }
 }
